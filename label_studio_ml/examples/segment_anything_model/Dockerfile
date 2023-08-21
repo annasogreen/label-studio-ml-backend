@@ -30,5 +30,6 @@ COPY . ./
 
 EXPOSE 9090
 
-COPY start.sh /start.sh
-CMD ["/app/start.sh"]
+# CMD ["/app/start.sh"]
+
+CMD exec gunicorn --preload --bind :$PORT --workers 1 --threads 8 --timeout 0 _wsgi:app 

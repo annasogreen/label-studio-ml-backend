@@ -17,9 +17,15 @@ RUN apt-get update -q \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy and run the model download script
+# Copy the model download script
 COPY download_models.sh .
-RUN dos2unix download_models.sh
-RUN bash /app/download_models.sh
+
+# Convert the script to Unix-style line endings using 'tr' command
+RUN tr -d '\r' < download_models.sh > download_models_unix.sh && \
+   chmod +x download_models_unix.sh
+
+# Run the modified script with Unix-style line endings
+RUN bash /app/download_models_unix.sh
 
 # Install Python dependencies
 COPY requirements.txt .

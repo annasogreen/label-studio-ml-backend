@@ -18,6 +18,7 @@ RUN apt-get update -q \
 
 # Copy and run the model download script
 COPY download_models.sh .
+RUN dos2unix download_models.sh
 RUN bash /app/download_models.sh
 
 # Install Python dependencies

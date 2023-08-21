@@ -10,7 +10,7 @@ from label_studio_ml.utils import get_image_local_path, InMemoryLRUDictCache
 logger = logging.getLogger(__name__)
 
 # VITH_CHECKPOINT = os.environ.get("VITH_CHECKPOINT", "sam_vit_h_4b8939.pth")
-VITH_CHECKPOINT = os.environ.get("VITH_CHECKPOINT", "C:\Users\anna.green\Downloads\sam_vit_h_4b8939.pth")
+VITH_CHECKPOINT = os.environ.get("VITH_CHECKPOINT", "Users\anna.green\Downloads\sam_vit_h_4b8939.pth")
 ONNX_CHECKPOINT = os.environ.get("ONNX_CHECKPOINT", "sam_onnx_quantized_example.onnx")
 MOBILESAM_CHECKPOINT = os.environ.get("MOBILESAM_CHECKPOINT", "mobile_sam.pt")
 LABEL_STUDIO_ACCESS_TOKEN = os.environ.get("LABEL_STUDIO_ACCESS_TOKEN")

@@ -18,7 +18,7 @@ services:
       - SAM_CHOICE=SAM
       - LOG_LEVEL=DEBUG
       # Add these variables if you want to access the images stored in Label Studio
-      - LABEL_STUDIO_HOST=http://192.168.1.36:8080
+      - LABEL_STUDIO_HOST=http://localhost:8080
       - LABEL_STUDIO_ACCESS_TOKEN=7436b41efe15a83b80c3bd49d5da5cfde9679b7b
     ports:
       - 9090:9090

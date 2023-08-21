@@ -26,7 +26,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . ./
 
 # Add ONNX model
-RUN python3 onnxconverter.py
+# RUN python3 onnxconverter.py
 
 EXPOSE 9090
 

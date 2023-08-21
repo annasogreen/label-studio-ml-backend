@@ -13,6 +13,7 @@ RUN apt-get update -q \
     && apt-get install -qy --no-install-recommends wget git libopencv-dev python3-opencv \
     && apt-get autoremove -y \
     && apt-get clean \
+    && wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy and run the model download script

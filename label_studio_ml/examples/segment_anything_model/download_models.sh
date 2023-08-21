@@ -5,7 +5,7 @@ mkdir -p models
 
 # check if file `sam_vit_h_4b8939.pth` exists, otherwise download the model
 [ -f /app/models/sam_vit_h_4b8939.pth ] ||
-wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth -P models/
+wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth -P /app/models/
 
 sleep 198
 

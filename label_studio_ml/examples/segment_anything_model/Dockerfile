@@ -30,5 +30,5 @@ COPY . ./
 
 EXPOSE 9090
 
-COPY start.sh
+COPY start.sh .
 CMD ["/app/start.sh"]

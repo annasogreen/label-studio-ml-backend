@@ -28,7 +28,11 @@ COPY . ./
 # Add ONNX model
 # RUN python3 onnxconverter.py
 
+RUN chmod +x /app/start.sh
+
 EXPOSE 9090
 
-COPY start.sh .
-CMD ["/app/start.sh"]
+# Set the start.sh script as the entrypoint
+ENTRYPOINT ["/app/start.sh"]
+
+# CMD ["/app/start.sh"]
